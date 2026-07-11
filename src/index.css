@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f7f9fb;
+  --color-surface-dim: #d8dadc;
+  --color-surface-lowest: #ffffff;
+  --color-surface-low: #f2f4f6;
+  --color-surface-container: #eceef0;
+  --color-surface-high: #e6e8ea;
+  --color-surface-highest: #e0e3e5;
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #45464d;
+  --color-outline: #75777e;
+  --color-outline-variant: #c5c6ce;
+
+  --color-primary: #000000;
+  --color-primary-container: #0e1b34;
+  --color-on-primary-container: #7884a2;
+  --color-inverse-primary: #bac6e7;
+
+  --color-secondary: #006c4a;
+  --color-secondary-container: #56febc;
+  --color-on-secondary-container: #00734f;
+
+  --color-tertiary-container: #271900;
+  --color-on-tertiary-container: #ac7b00;
+  --color-tertiary-fixed-dim: #ffba20;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --font-geist: 'Geist', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-sm: 0.125rem;
+  --radius-default: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-inter antialiased min-h-screen;
+    font-size: 16px;
+    --density-scale: 1; /* Dynamic UI density multiplier */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-geist font-semibold;
+  }
+}
+
+/* Custom styles for animations and specific components */
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw {
+  stroke-dasharray: 8;
+  stroke-dashoffset: 100;
+  animation: dash 2s linear forwards;
+}
+
+/* Custom Scrollbar for sleek UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-surface;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-outline-variant rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-outline;
+}
+
+/* UI Density Classes */
+.card-padding {
+  padding: calc(1.5rem * var(--density-scale, 1));
+}
+.card-title-size {
+  font-size: calc(1.25rem * var(--density-scale, 1));
+}
+.text-scaled {
+  font-size: calc(0.875rem * var(--density-scale, 1));
+}
+.input-padding {
+  padding-top: calc(0.75rem * var(--density-scale, 1));
+  padding-bottom: calc(0.75rem * var(--density-scale, 1));
+  padding-left: calc(1rem * var(--density-scale, 1));
+  padding-right: calc(1rem * var(--density-scale, 1));
+}
