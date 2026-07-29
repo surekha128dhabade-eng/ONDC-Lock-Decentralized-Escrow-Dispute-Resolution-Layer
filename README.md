@@ -34,6 +34,46 @@ Once connected, the wallet address is securely queried, truncated, and displayed
 
 ---
 
+## 📱 Mobile Responsive UI
+
+ONDC-Lock is fully responsive and optimized for mobile browsers. Below are live screenshots taken from a mobile device running the app at [ondclock-settlement.surge.sh](https://ondclock-settlement.surge.sh):
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/Screenshot_20260729_095949_Chrome.jpg" alt="Mobile Home — Navigation Drawer" width="280"/><br/>
+      <sub><b>🏠 Home — Navigation Drawer</b></sub><br/>
+      <sub>Mobile nav drawer with all app routes: Buyer Dashboard, Rider Dashboard, Validator Console, How It Works, and Settings.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/Screenshot_20260729_100201_Chrome.jpg" alt="Mobile Connect Wallet Modal" width="280"/><br/>
+      <sub><b>🔗 Connect Wallet Modal</b></sub><br/>
+      <sub>Stitch-styled wallet connection modal on mobile, showing QR Mobile Sync alongside Freighter, Albedo Link, and xBull Wallet options.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/Screenshot_20260729_100213_Chrome.jpg" alt="Mobile Buyer Dashboard" width="280"/><br/>
+      <sub><b>🛒 Buyer Dashboard</b></sub><br/>
+      <sub>Create Order Escrow form on mobile — enter Seller address, Rider address, OTP, amount, and Delhi delivery coordinates to deploy a sandboxed escrow.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/screenshots/Screenshot_20260729_100219_Chrome.jpg" alt="Mobile How It Works Page" width="280"/><br/>
+      <sub><b>📖 How It Works & User Guide</b></sub><br/>
+      <sub>Interactive guide showing the 4-step Payout Lifecycle Flow — Deploy & Fund → Handover & Proof → GPS Check → Atomic Split — alongside role-based guides.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="docs/screenshots/Screenshot_20260729_100223_Chrome.jpg" alt="Mobile Validator Hub" width="280"/><br/>
+      <sub><b>⚖️ Validator Hub — Console View</b></sub><br/>
+      <sub>Validator Console showing live Reputation Score (98/100), 43 disputes resolved, 500 XLM staked, active dispute queue with case priorities, and YTD reward earnings graph.</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 🛠️ Deployed Stellar Testnet Contracts
 
 ONDC-Lock leverages a modular 5-contract microservice architecture. All contracts are currently deployed on the Stellar Testnet:
@@ -255,4 +295,3 @@ Ready to test ONDC-Lock on Testnet? Follow this standard flow:
    * Go to the **Validator Console** and stake XLM to register.
    * Go to the **Case Detail** view to review coordinate terminal logs, claims, and photo galleries.
    * Cast your vote. The majority consensus splits or refunds the escrow automatically.
-
