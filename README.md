@@ -295,3 +295,4 @@ Ready to test ONDC-Lock on Testnet? Follow this standard flow:
    * Go to the **Validator Console** and stake XLM to register.
    * Go to the **Case Detail** view to review coordinate terminal logs, claims, and photo galleries.
    * Cast your vote. The majority consensus splits or refunds the escrow automatically.
+
