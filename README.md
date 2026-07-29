@@ -88,6 +88,39 @@ ONDC-Lock leverages a modular 5-contract microservice architecture. All contract
 
 ---
 
+## 📊 Testnet Traction
+
+ONDC-Lock has been actively tested on the **Stellar Testnet** with real end-to-end transaction flows including escrow deployments, OTP-verified handovers, atomic payout splits, dispute openings, and on-chain validator voting.
+
+### 🔢 Key Metrics (as of July 29, 2026)
+
+| Metric | Count |
+| :--- | :---: |
+| 🏭 Escrow Instances Deployed | **2** |
+| ✅ Successful OTP + GPS Verifications | **2** |
+| 💸 Atomic Payout Splits Executed | **2** |
+| ⚖️ Disputes Opened | **2** |
+| 🗳️ Validator Votes Cast | **2** |
+| 🧑‍⚖️ Validators Registered & Staked | **1** |
+| 🏪 Participants (Buyers / Sellers) Registered | **2** |
+| 📦 Total Testnet Transactions | **12** |
+
+> 📄 Full transaction-level traction data is available in [`docs/testnet_traction.csv`](docs/testnet_traction.csv)
+
+### 🔗 Testnet Contract Addresses (Quick Reference)
+
+All contracts are deployed and verified on the **Stellar Testnet**. You can inspect each contract directly on [Stellar Expert (Testnet)](https://stellar.expert/explorer/testnet):
+
+| Contract | Testnet Address | Explorer Link |
+| :--- | :--- | :---: |
+| **EscrowFactory** | `CAHJBEWY2DNJZBXXQUCITHDGIAA4DZDJDSRFS6UZO7WMJFNE26IXV4ME` | [🔍 View](https://stellar.expert/explorer/testnet/contract/CAHJBEWY2DNJZBXXQUCITHDGIAA4DZDJDSRFS6UZO7WMJFNE26IXV4ME) |
+| **ParticipantRegistry** | `CCTZQQJURSG6OL2WTPDBWSWXIYOW7MSHD7EZ4XW25H4UNO7CJIAYBOKA` | [🔍 View](https://stellar.expert/explorer/testnet/contract/CCTZQQJURSG6OL2WTPDBWSWXIYOW7MSHD7EZ4XW25H4UNO7CJIAYBOKA) |
+| **ValidatorRegistry** | `CCL2JGIDNFXPLEKJ5N6LFIVYLP6YJJR7MTB653ZYIPKENYYEI6QQBV2T` | [🔍 View](https://stellar.expert/explorer/testnet/contract/CCL2JGIDNFXPLEKJ5N6LFIVYLP6YJJR7MTB653ZYIPKENYYEI6QQBV2T) |
+| **DisputeRegistry** | `CB5JHSE4CQWUDXANNT6ZE7LM4QXCB7Y6VJ4XCC2UWRJRTDPBLZENEOE2` | [🔍 View](https://stellar.expert/explorer/testnet/contract/CB5JHSE4CQWUDXANNT6ZE7LM4QXCB7Y6VJ4XCC2UWRJRTDPBLZENEOE2) |
+| **OrderEscrow WASM Hash** | `99f38a862a977a767d1253b171432a9c5a7e4f1521714af8b233d16954478d7c` | [🔍 View](https://stellar.expert/explorer/testnet/tx/99f38a862a977a767d1253b171432a9c5a7e4f1521714af8b233d16954478d7c) |
+
+---
+
 ## 📐 Architecture & Contract Interactions
 
 ONDC-Lock implements a sandboxed, factory-deployed architecture. This means each delivery order spawns its own isolated `OrderEscrow` contract instance, containing strictly defined participants, amounts, and rules.
@@ -295,4 +328,3 @@ Ready to test ONDC-Lock on Testnet? Follow this standard flow:
    * Go to the **Validator Console** and stake XLM to register.
    * Go to the **Case Detail** view to review coordinate terminal logs, claims, and photo galleries.
    * Cast your vote. The majority consensus splits or refunds the escrow automatically.
-
